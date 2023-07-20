@@ -3,7 +3,6 @@ let app = express();
 const port = 5001
 
 const quoteList = require('./quoteList')
-
 app.use(express.static('server/public'));
 
 //when we visit localhost:5001/quotes
@@ -15,6 +14,7 @@ app.get('/quotes', function(req, res){
     //so we can see it in our browser
     res.send(quoteList)
 })
+
 
 app.listen(port, function() { 
     console.log('listening on port', port);

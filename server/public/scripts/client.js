@@ -12,6 +12,8 @@ function getQuotes(){
  }) 
 }
 
+
+
 // getQuotes()
 
 function renderToDom(quotes){
