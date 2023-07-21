@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quotes</title>  
+  <title>server/public</title>  
 </head>
 <body>
 
 
-  <h1>Quotes!</h1>
-  <button onclick="getQuotes()">Click for Quotes</button>
-  <ul id="output"></ul>
+  <h1>By this page loading I have been served the server/Public folder from my server.!</h1>
   
+  <form onSubmit="submitForm(event)">
+    Number: <input type="text" id="NumberInput" />
+</form>
+
+  <button onclick="addItemToClient(event)" >Add an item to client</button>
+  <button onclick="addToServer(event)" >add an item to server</button>
+  <button onclick="addItemToBoth(event)" >add an item to client and server</button>
+<br>
+  <h2>Client Numbers</h1>
+  <h3>In code varriable is clientNumbers.</h2>
+  <ul id="outputFromClient"></ul>
+<br>
+<h2>  Server Numbers</h1>
+<h3>In code there is no varriable, the array is stored on the server.</h2>
+  <ul id="outputFromServer"></ul>
+  <br>
+
+
+  <h2> If I refresh the page all numbers stored in Client will go away</h1>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="scripts/client.js"></script>
 </body>
 </html>
+
+
